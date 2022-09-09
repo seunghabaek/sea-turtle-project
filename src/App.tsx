@@ -5,10 +5,12 @@ import { seaturtleMeta } from "./data/seaturtleMeta";
 import { CITIES } from "./data/cities";
 import { arcsData } from "./data/arcsData";
 
+const markerTooltipRenderer = (marker: { name: string; gid: string }) => {
+  return `Animal: ${marker.name} (gid: ${marker.gid})`;
+};
+
 function App() {
-  const [cities, setCities] = useState({
-    lat: CITIES.lat,
-  });
+  const [details, setDetails] = useState(null);
 
   const onPointClick = () => {
     alert("hi");
@@ -22,13 +24,17 @@ function App() {
     return "turtle";
   };
 
-  let today = new Date();
-  let hours = today.getHours();
-  let dayAndNight = hours >= 7 && hours <= 18 ? "day" : "night";
+  // const onClickMarker;
+
+  // let today = new Date();
+  // let hours = today.getHours();
+  // let dayAndNight = hours >= 7 && hours <= 18 ? "day" : "night";
 
   return (
     <Globe
-      globeImageUrl={`//unpkg.com/three-globe/example/img/earth-${dayAndNight}.jpg}`}
+      // globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
+      // globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+      globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
       backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
       pointsData={seaturtleLoc}
       pointAltitude="size"
@@ -40,7 +46,8 @@ function App() {
       onPointClick={onPointClick}
       onPointRightClick={onRightPointClick}
       onPointHover={onPointHover}
-      showAtmosphere={true}
+      showAtmosphere={false}
+      animateIn={true}
       arcColor={"color"}
       arcsData={arcsData}
     />
