@@ -1,0 +1,51 @@
+export const arcsData = [
+  {
+    startLat: 9.3521,
+    startLng: 112.8198,
+    endLat: 4.3521,
+    endLng: 113.8198,
+    color: " white",
+  },
+  {
+    startLat: 4.3521,
+    startLng: 113.8198,
+    endLat: 10.73061,
+    endLng: 123.935242,
+    color: " white",
+  },
+  {
+    startLat: 10.73061,
+    startLng: 123.935242,
+    endLat: 20.73061,
+    endLng: 135.935242,
+    color: " white",
+  },
+  {
+    startLat: 20.73061,
+    startLng: 135.935242,
+    endLat: 24.73061,
+    endLng: 145.935242,
+    color: " white",
+  },
+  {
+    startLat: 24.73061,
+    startLng: 145.935242,
+    endLat: 34.73061,
+    endLng: 156.935242,
+    color: " white",
+  },
+  {
+    startLat: -3.3521,
+    startLng: 170.8198,
+    endLat: -4.3521,
+    endLng: 160.8198,
+    color: " red",
+  },
+  {
+    startLat: -4.3521,
+    startLng: 160.8198,
+    endLat: -10.73061,
+    endLng: 150.935242,
+    color: " red",
+  },
+];
